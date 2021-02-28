@@ -13,7 +13,7 @@ const docClient = new dynamodb.DocumentClient();
 exports.deleteByIdHandler = async (event) => {
     if (event.httpMethod !== 'DELETE') {
         throw new Error(
-            `getMethod only accept DELETE method, you tried: ${event.httpMethod}`
+            `deleteById only accept DELETE method, you tried: ${event.httpMethod}`
         );
     }
     // All log statements are written to CloudWatch
